@@ -1,12 +1,14 @@
 from django.contrib import admin
-from .models import servicio
-
+from .models import Ser
 # Register your models here.
 
-class servicioAdmin(admin.ModelAdmin):
-    readonly_fields('created','updated');
+class ServicioAdmin(admin.ModelAdmin):
+    readonly_fields=('created','updated')
 
-admin.site.register(servicio,servicioAdmin);
+admin.site.register(Servicio , ServicioAdmin);
+
+
+
 
     
 
