@@ -1,20 +1,11 @@
 from django.contrib import admin
+from servicios.models import Servicio
 
-
-from .models import patata
-#Register your models here.
-
+# Register your models here.
 
 class ServicioAdmin(admin.ModelAdmin):
-    readonly_fields=('created','updated')
+    readonly_fields = ("created","updated")
 
-
-
-
-admin.site.register('Servicio' , 'ServicioAdmin')
-
-
-
-
+admin.site.register(Servicio,ServicioAdmin)
     
 
