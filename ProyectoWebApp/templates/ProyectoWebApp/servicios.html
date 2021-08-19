@@ -2,7 +2,8 @@
   {% load static %}
   {% block title %}Servicios{% endblock %}
   {% block content %}
-  <div class = "bloqueServicios">
+  <link rel="stylesheet" href="{% static 'ProyectoWebApp/css/gestion.css' %}">
+  <div class="bloqueServicios">
     <p>
     {% for servicio in servicios %}
         <h2>{{servicio.titulo}}</h2>
