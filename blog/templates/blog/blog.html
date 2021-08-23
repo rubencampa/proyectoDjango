@@ -1,0 +1,45 @@
+
+{% extends "ProyectoWebApp/base.html" %}
+  {% load static %}
+  <link href="{% static 'ProyectoWebApp/css/gestion.css' %}" rel="stylesheet" />
+  {% block title %}Blog{% endblock %}
+  {% block content %}
+  <div class="bloquePosts">
+    <p>
+    {% for post in posts %}
+       
+        <p>
+        <section class="page-section clearfix">
+          <div class="container">
+            <div class="intro">
+              <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{post.imagen.url}}" alt=""/>
+              <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                <h2 class="section-heading mb-4">
+                  <span class="section-heading-lower">{{post.titulo}}</span>
+                </h2>
+                <p class="mb-3">
+                  {{post.contenido}}
+                </p>
+                <div style="text-align: left; font-size: 0.8em;">
+                
+                  Autor : {{post.autor}}
+                
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    {% endfor %}
+    </p>
+  </div>
+  <div style="width: 75%; margin: auto; text-align:center; color:white; font-size: 1.3rem;">
+    Categorías:
+
+    {% for post in posts %}
+      {% for categoria in post.categorias.all%}
+      &nbsp;&nbsp;&nbsp;&nbsp; <a href="" class="linkCategorias">{{categoria.nombre}}</a> &nbsp;&nbsp;&nbsp;
+      {% endfor %}
+    {% endfor %}
+    
+  </div>
+  {% endblock %}
