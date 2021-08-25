@@ -3,6 +3,8 @@
   <link href="{% static 'blog/css/blog.css' %}" rel="stylesheet" />
   {% block title %}Blog{% endblock %}
   {% block content %}
+
+  
   <div class="bloquePosts">
     <p>
     {% for post in posts %}
@@ -32,11 +34,11 @@
     </p>
   </div>
   <div style="width: 75%; margin: auto; text-align:center; color:white; font-size: 1.3rem;">
-    Categorías:
+    Categoría:
 
     {% for post in posts %}
       {% for categoria in post.categorias.all%}
-      &nbsp;&nbsp;&nbsp;&nbsp; <a href="{% url 'categoria' categoria.id %}" class="linkCategorias">{{categoria.nombre}}</a> &nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp; <a href="" class="linkCategorias">{{categoria.nombre}}</a> &nbsp;&nbsp;&nbsp;
       {% endfor %}
     {% endfor %}
     

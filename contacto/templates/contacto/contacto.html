@@ -1,0 +1,20 @@
+{% extends "ProyectoWebApp/base.html" %}
+  {% load static %}
+  {% block title %}Contacto{% endblock %}
+  {% block content %}
+  <h2 class="tituloForm">Formulario de Contacto</h2>
+  <form action="" method="post">
+    <div class="formularioDeContacto">
+      {% csrf_token %}
+      <table>
+        {{ miFormulario.as_table }}
+      </table>
+      <input type="submit" value="Enviar">
+    </div>
+  </form>
+  <p style="color:white;">{{request.POST}}}</p><br><br>
+    {% if "valido" in request.GET %}
+      <p style="color:white;">Información, enviada correctamente, Gracias</p>
+    {% endif %}
+  {% endblock %}
+ 

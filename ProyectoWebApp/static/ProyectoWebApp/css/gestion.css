@@ -1,3 +1,5 @@
+/* acordarse de hacer los cambios del css con el ctrl-f5 el cache a veces no te deja reconocer los cambios */
+
 body {
   font-family: 'Lora';
   background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../img/bg_main.jpg");
@@ -277,4 +279,46 @@ ul.errorlist{
   padding-top: .75rem;
   font-style: italic;
   color: red;
+}
+
+.linkCategorias, .linkCategorias:hover{
+  color:white;
+  font-size: 1.5rem;
+}
+
+.formularioDeContacto{
+  margin: 1rem auto;
+  background-color: #296D0E;
+  color:white;
+  text-align: center;
+  width: 40%;
+  padding:2rem;
+  border-radius:15px;
+}
+
+.tituloForm{
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.formularioDeContacto table{
+  margin: 0 auto;
+}
+
+.formularioDeContacto table input, .formularioDeContacto table label{
+  margin-top: 1rem ;
+}
+
+.formularioDeContacto table textarea{
+  width: 12.5rem;
+  height: 10rem;
+  margin-top: 1rem ;
+  margin-left: 1rem ;
+  margin-right: 1rem ;
+}
+
+input[type="submit"]{
+  width: 100px;
+  margin: 1rem;
 }
